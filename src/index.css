@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme{
+  --font-bebas:bebas-neue-regular, sans-serif ;
+  --font-poppins:poppins, sans-serif;
+  --color-primary: #0a0909;
+  --color-secondary: #64688b;
+  --color-tertiary: #1e202f;
+  --color-quaternary: #f5f5f5;
+  --color-rgb:rgb(186, 66, 255);
+  --bg-primary: linear-gradient(0.25deg, #0a0909, #1e202f,#64688b);
+  --bg-primaryTwo: linear-gradient(0.25deg, #64688b, #1e202f,#0a0909);
+  --bg-primaryT: linear-gradient(
+  0.25deg,
+  rgba(100, 104, 139, 0.1), /* first color with 60% opacity */
+  rgba(30, 32, 47, 0.1),
+  rgba(10, 9, 9, 0.1)
+);
+
+}
+body{
+  overflow-x: hidden;
+}
+
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.clip-path{
+  clip-path: polygon(0 0, 100% 0 , 100% 100% , 0% 100%);
+} 
+
+.count-h1{
+  position: relative;
+  color: var(--color-quaternary);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 110px;
+  letter-spacing: -0.04em;
+  will-change: transform;
+}
+
+.bg-gradient {
+  background: var(--bg-primary);
+}
+
+.dark .bg-gradient  {
+  background: black;
+}
+
+.bg-gradientT {
+  background:var(--bg-primaryT);
+}
+.bg-gradientTwo{
+ background: var(--bg-primaryTwo);
+}
+.dark .bg-gradientTwo{
+ background: black;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: var(--color-quaternary);
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.link:hover {
+  color: var(--color-secondary);
+}
+
+.shadow{
+  box-shadow: 0px -5px 10px 0px rgb(186, 66, 255), 0px 5px 10px 0px rgba(0, 225, 255, 0.762);
+}
+.shadowTwo{
+  box-shadow: 0px -5px 10px 0px rgba(186, 66, 255, 0.691), 0px 5px 10px 0px rgba(0, 225, 255, 0.762);
+}
+
+
