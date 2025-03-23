@@ -3,10 +3,10 @@ import { useState } from "react";
 const Contact = () => {
   const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.target as HTMLFormElement);
 
     formData.append("access_key", "7f597bc3-e3d4-4510-b858-89c3dc4bbd96");
 
@@ -19,7 +19,7 @@ const Contact = () => {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
-      event.target.reset();
+      (event.target as HTMLFormElement).reset();
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -125,7 +125,7 @@ const Contact = () => {
                   <div className="space-y-6">
                     <div>
                       <label
-                        htmlFor
+                        htmlFor="name"
                         className="text-xs uppercase font-semibold font-bebas text-gray-900 "
                       >
                         {" "}
@@ -134,8 +134,8 @@ const Contact = () => {
                       <div className="mt-2.5 relative">
                         <input
                           type="text"
-                          name="text"
-                          id="text"
+                          name="name"
+                          id="name"
                           placeholder="Enter your full name"
                           className="block font-mono text-sm w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-gray-100 border border-gray-200 rounded-md "
                         />
@@ -143,7 +143,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label
-                        htmlFor
+                        htmlFor="email"
                         className="text-xs uppercase font-semibold font-bebas text-gray-900"
                       >
                         {" "}
@@ -161,7 +161,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <label
-                        htmlFor
+                        htmlFor="message"
                         className="text-xs uppercase font-semibold font-bebas text-gray-900"
                       >
                         {" "}

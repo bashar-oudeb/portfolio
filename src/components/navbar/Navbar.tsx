@@ -99,7 +99,6 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className="link font-bebas"
-              activeClassName="text-red-600"
             >
               {link.name}
             </NavLink>

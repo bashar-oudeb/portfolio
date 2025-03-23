@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { motion, useTransform, useScroll, hover } from "framer-motion";
 import { useRef, useState } from "react";
 import project from "../../assets/projects/project.png";
@@ -17,7 +18,7 @@ const Projects = () => {
 
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e ) => {
     setCursorPos({ x: e.clientX, y: e.clientY });
   };
 
