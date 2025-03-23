@@ -21,6 +21,12 @@
   rgba(10, 9, 9, 0.1)
 );
 
+
+
+}
+
+html {
+  scroll-behavior: smooth;
 }
 body{
   overflow-x: hidden;
@@ -78,7 +84,8 @@ img{
   transition: all 0.3s;
 }
 .link:hover {
-  color: var(--color-secondary);
+  color: var(--color-quaternary);
+  opacity: 50%;
 }
 
 .shadow{

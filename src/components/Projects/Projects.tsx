@@ -1,6 +1,10 @@
 import { motion, useTransform, useScroll, hover } from "framer-motion";
 import { useRef, useState } from "react";
 import project from "../../assets/projects/project.png";
+import project1 from "../../assets/projects/project1.png";
+import project2 from "../../assets/projects/project2.png";
+import project3 from "../../assets/projects/project3.png";
+import project4 from "../../assets/projects/project4.png";
 import { Link } from "react-router";
 
 const Projects = () => {
@@ -19,36 +23,49 @@ const Projects = () => {
 
   const cards = [
     {
-      url: "/imgs/abstract/1.jpg",
-      title: "Title 1",
+      img: project,
+      title: "Home-Smart Website",
       id: 1,
+      view:'',
+      github:'',
     },
     {
-      url: "/imgs/abstract/2.jpg",
-      title: "Title 2",
+      img: project1,
+      title: "Pay System Website",
       id: 2,
+      view:'',
+      github:'',
     },
     {
-      url: "/imgs/abstract/2.jpg",
-      title: "Title 2",
-      id: 2,
+      img: project2,
+      title: "E-commerce Website",
+      id: 3,
+      view:'',
+      github:'',
     },
     {
-      url: "/imgs/abstract/2.jpg",
-      title: "Title 2",
-      id: 2,
+      img: project3,
+      title: "FullStack E-Commerce",
+      id: 4,
+      view:'',
+      github:'',
     },
     {
-      url: "/imgs/abstract/2.jpg",
-      title: "Title 2",
-      id: 2,
+      url: project4,
+      title: "Headphones Website",
+      id: 5,
+      view:'',
+      github:'',
     },
   ];
 
   return (
-    <section ref={targetRef} className=" relative h-[300vh] bg-gradient dark:bg-black md:pt-28 -mb-1 -mt-1">
-      <div className="  absolute px-12 top-12 md:top-24 lg:top-36  md:left-1/4 lg:left-0 lg:px-4 ">
-        <h1 className="font-bebas text-quaternary font-bold text-6xl lg:text-8xl opacity-80 uppercase">
+    <section
+      ref={targetRef}
+      className=" relative h-[300vh] bg-gradient dark:bg-black md:pt-2 -mb-1 -mt-1"
+    >
+      <div className="  absolute px-12 top-12   md:left-1/4 lg:left-0 lg:px-4 ">
+        <h1 className="font-bebas text-quaternary font-bold text-6xl lg:text-8xl opacity-90 uppercase">
           Projects
         </h1>
       </div>
@@ -94,7 +111,7 @@ const Card = ({ card, onHoverStart, onHoverEnd, onMouseMove }) => {
         onMouseEnter={onHoverStart}
         onMouseLeave={onHoverEnd}
         onMouseMove={onMouseMove}
-        className="group relative h-[450px] w-[400px] md:w-[450px] overflow-hidden bg-neutral-200 cursor-none"
+        className="group relative h-[450px] w-[400px] md:w-[450px]  overflow-hidden bg-neutral-200 cursor-none"
       >
         <div
           style={{
@@ -104,17 +121,17 @@ const Card = ({ card, onHoverStart, onHoverEnd, onMouseMove }) => {
           }}
           className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
         >
-          <img src={project} alt="" className="w-full h-full object-cover" />
+          <img src={card.img} alt="" className="w-full h-full object-cover" />
         </div>
       </div>
       <div className=" bg-gradientT">
         <h1 className="pt-1.5 text-quaternary font-mono uppercase text-2xl text-center ">
-          Pay System Website
+          {card.title}
         </h1>
         <div className="py-1.5 flex items-center gap-2.5 justify-center">
           <Link
-            to={""}
-            className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400 flex items-center gap-1"
+            to={card.view}
+            className="text-gray-400 hover:text-gray-200    dark:text-gray-300 dark:hover:text-white flex items-center gap-1 transition-all"
           >
             <svg
               aria-hidden="true"
@@ -132,24 +149,23 @@ const Card = ({ card, onHoverStart, onHoverEnd, onMouseMove }) => {
           </Link>
 
           <Link
-  to=""
-  className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400 flex items-center gap-1"
->
-  <svg
-    viewBox="0 0 48 48"
-    xmlns="http://www.w3.org/2000/svg"
-    className="w-7 h-7"
-    fill="currentColor"
-  >
-    <path d="M0 0h48v48H0z" fill="none"></path>
-    <g id="Shopicon">
-      <circle cx="24" cy="24" r="4"></circle>
-      <path d="M24,38c12,0,20-14,20-14s-8-14-20-14S4,24,4,24S12,38,24,38z M24,16c4.418,0,8,3.582,8,8s-3.582,8-8,8s-8-3.582-8-8 S19.582,16,24,16z"></path>
-    </g>
-  </svg>
-  <span>View</span>
-</Link>
-
+            to={card.github}
+            className="text-gray-400 hover:text-gray-200  transition-all dark:hover:text-white dark:text-gray-300 flex items-center gap-1"
+          >
+            <svg
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-7 h-7"
+              fill="currentColor"
+            >
+              <path d="M0 0h48v48H0z" fill="none"></path>
+              <g id="Shopicon">
+                <circle cx="24" cy="24" r="4"></circle>
+                <path d="M24,38c12,0,20-14,20-14s-8-14-20-14S4,24,4,24S12,38,24,38z M24,16c4.418,0,8,3.582,8,8s-3.582,8-8,8s-8-3.582-8-8 S19.582,16,24,16z"></path>
+              </g>
+            </svg>
+            <span>View</span>
+          </Link>
         </div>
       </div>
     </div>

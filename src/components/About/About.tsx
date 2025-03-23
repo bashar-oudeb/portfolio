@@ -3,9 +3,9 @@ import { TextReveal } from "../magicui/text-reveal";
 
 const About = () => {
   return (
-    <section className="pt-20 lg:pT-28 bg-gradientTwo  w-full">
+    <section className="pt-20 lg:pt-28 bg-gradientTwo  w-full -mt-0.5 " id="about">
       <div className="  lg:flex lg:px-8">
-        <h1 className="font-bebas text-quaternary  font-bold text-6xl lg:text-8xl text-center opacity-80 uppercase ">
+        <h1 className="font-bebas text-quaternary  font-bold text-6xl lg:text-8xl text-center opacity-90 uppercase ">
           About Me.
         </h1>
         <div className="">

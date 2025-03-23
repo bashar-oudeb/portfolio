@@ -21,18 +21,18 @@ export default function FooterSection() {
     <footer className="pt-16 pb-6 md:pt-32  bg-gradient">
       <div className="mx-auto max-w-5xl px-6">
         <Link to="/" aria-label="go home" className="mx-auto flex size-fit  gap-1">
-          <h1 className="h-8 w-8 center font-bold text- bg-quaternary opacity-90 rounded-full hover:bg-tertiary hover:text-quaternary transition-all">
+          <h1 className="h-8 w-8 center font-bold text- bg-quaternary dark:opacity-90  rounded-full hover:bg-secondary dark:hover:bg-primary hover:text-quaternary transition-all">
             B
           </h1>
-          <h1 className="link font-poppins text-xl  pt-0.5 opacity-90">Oudeb</h1>
+          <h1 className="link font-poppins text-xl  pt-0.5 opacity-90 dark:opacity-90">Oudeb</h1>
         </Link>
 
         <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
           {links.map((link, index) => (
             <Link
               key={index}
-              href={link.href}
-              className=" font-bebas  text-base opacity-80 font-semibold text-quaternary hover:text-primary block duration-150"
+              to={link.href}
+              className=" font-bebas  text-base opacity-80 dark:opacity-90 font-semibold text-quaternary  hover:text-quaternary  hover:opacity-50 block duration-150 transition-all"
             >
               <span>{link.title}</span>
             </Link>
@@ -43,7 +43,7 @@ export default function FooterSection() {
             <li>
               <Link
                 to={""}
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+                className="text-gray-300 hover:text-gray-600 dark:hover:text-white dark:text-gray-400 transition-all"
               >
                 <svg
                   aria-hidden="true"
@@ -62,7 +62,7 @@ export default function FooterSection() {
             <li>
               <Link
                 to={""}
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+                className="text-gray-300 hover:text-gray-600 dark:hover:text-white dark:text-gray-400 transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default function FooterSection() {
             <li>
               <Link
                 to={""}
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+                className="text-gray-300 hover:text-gray-600 dark:hover:text-white dark:text-gray-400 transition-all"
               >
                 <svg
                   aria-hidden="true"
@@ -100,7 +100,7 @@ export default function FooterSection() {
             <li>
               <Link
                 to={""}
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+                className="text-gray-300 hover:text-gray-600 dark:hover:text-white dark:text-gray-400 transition-all"
               >
                 <svg
                   aria-hidden="true"

@@ -1,4 +1,30 @@
+import { useState } from "react";
+
 const Contact = () => {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "7f597bc3-e3d4-4510-b858-89c3dc4bbd96");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
   return (
     <section className=" bg-gradientTwo overflow-hidden pt-5 -mb-1">
       <div className="max-w-6xl  sm:px-6 lg:px-8">
@@ -69,7 +95,7 @@ const Contact = () => {
               <div className="flex items-center mt-4">
                 <div className=" w-12 h-12">
                   <img
-                    className="flex-shrink-0 object-cover w-full h-full rounded-full top-52 "
+                    className="flex-shrink-0 object-cover w-full h-full rounded-full top-52 " 
                     src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     alt=""
                   />
@@ -88,14 +114,14 @@ const Contact = () => {
 
           <div className="lg:pl-12 w-full">
             <div className="overflow-hidden  bg-white rounded-md">
-              <div className="py-6 px-2.5 sm:p-10">
+              <div className="py-6 px-2.5 ">
                 <h3 className="text-3xl text-center uppercase font-semibold text-black font-poppins">
                 Get in Touch
                 </h3>
                 <p className="text-center mt-4 text-base text-gray-600 font-mono ">
                 Feel free to get in touch using the form below. I’m always open to new collaborations and opportunities.
                 </p>
-                <form action="#" method="POST" className="mt-4">
+                <form action="#" onSubmit={onSubmit} method="POST" className="mt-4 lg:px-1.5">
                   <div className="space-y-6">
                     <div>
                       <label
@@ -108,8 +134,8 @@ const Contact = () => {
                       <div className="mt-2.5 relative">
                         <input
                           type="text"
-                          name
-                          id
+                          name="text"
+                          id="text"
                           placeholder="Enter your full name"
                           className="block font-mono text-sm w-full px-4 py-4 text-black placeholder-gray-400 transition-all duration-200 bg-gray-100 border border-gray-200 rounded-md "
                         />
@@ -125,9 +151,9 @@ const Contact = () => {
                       </label>
                       <div className="mt-2.5 relative">
                         <input
-                          type="text"
-                          name
-                          id
+                          type="email"
+                          name='email'
+                          id='email'
                           placeholder="Enter your full name"
                           className="block w-full px-4 py-4 text-black font-mono text-sm placeholder-gray-400 transition-all duration-200 bg-gray-100 border border-gray-200 rounded-md focus:outline-none "
                         />
@@ -143,8 +169,8 @@ const Contact = () => {
                       </label>
                       <div className="mt-2.5 relative">
                         <textarea
-                          name
-                          id
+                          name='message'
+                          required
                           placeholder="Enter your message"
                           className="block w-full px-4 py-4 text-black font-mono text-sm placeholder-gray-400 transition-all duration-200 bg-gray-100 border border-gray-200 rounded-md resize-y focus:outline-none "
                           rows={4}
@@ -155,11 +181,12 @@ const Contact = () => {
                     <div>
                       <button
                         type="submit"
-                        className="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-quaternary  font-poppins transition-all duration-200 bg-primary border border-transparent rounded-md focus:outline-none hover:bg-orange-600 focus:bg-orange-600"
+                        className="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-quaternary  font-poppins transition-all duration-200 bg-primary border border-transparent rounded-md focus:outline-none hover:bg-gray-900 cursor-pointer"
                       >
                         Send Message
                       </button>
                     </div>
+                    <span className="  text-xs font-mono font-medium">{result}</span>
                   </div>
                 </form>
               </div>

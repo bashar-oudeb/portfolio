@@ -31,7 +31,7 @@ export const RevealSkills: FC<TextRevealProps> = ({ children, className }) => {
         <span
           ref={targetRef}
           className={
-            "flex items-center  justify-end opacity-80 flex-wrap p-5 text-5xl font-bold font-poppins text-black/20 dark:text-white/20 md:p-8 md:text-3xl lg:p-10 lg:text-7xl "
+            "flex items-center justify-center  md:justify-end opacity-90 flex-wrap p-5 text-5xl font-bold font-poppins text-quaternary  md:p-8 md:text-3xl lg:p-10 lg:text-7xl "
           }
         >
           {words.map((word, i) => {
@@ -62,7 +62,7 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
       <span className="absolute opacity-30">{children}</span>
       <motion.span
         style={{ opacity: opacity }}
-        className={"text-black dark:text-white"}
+        className={"text-quaternary"}
       >
         {children}
       </motion.span>

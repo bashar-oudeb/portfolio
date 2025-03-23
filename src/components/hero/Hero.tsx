@@ -9,7 +9,7 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <section  className="bg-gradient dark:bg-black   w-full h-screen relative ">
+    <section className="bg-gradient dark:bg-black   w-full h-screen relative ">
       <Navbar />
       <div className=" pt-16 md:pt-10 lg:pt-20 px-4">
         <div className=" center">
@@ -54,8 +54,9 @@ const Hero = () => {
           <ul className="flex justify-center mt-5 space-x-5">
             <li>
               <Link
-                to={""}
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+                to={"https://github.com/bashar-oudeb"}
+                className="text-gray-500 hover:text-gray-600 dark:hover:text-white dark:text-gray-400  transition-all"
+                target="blank"
               >
                 <svg
                   aria-hidden="true"
@@ -73,8 +74,9 @@ const Hero = () => {
             </li>
             <li>
               <Link
-                to={""}
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+                to={"https://www.linkedin.com/in/bachar-oudeb/"}
+                target="blank"
+                className="text-gray-500 hover:text-gray-600 dark:hover:text-white dark:text-gray-400 transition-all"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -92,8 +94,9 @@ const Hero = () => {
             </li>
             <li>
               <Link
-                to={""}
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+                to={"https://www.instagram.com/bashar.oudeb/"}
+                target="blank"
+                className="text-gray-500 hover:text-gray-600 transition-all dark:hover:text-white dark:text-gray-400"
               >
                 <svg
                   aria-hidden="true"
@@ -112,7 +115,7 @@ const Hero = () => {
             <li>
               <Link
                 to={""}
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+                className="text-gray-500 hover:text-gray-600 transition-all dark:hover:text-white dark:text-gray-400"
               >
                 <svg
                   aria-hidden="true"
@@ -124,9 +127,10 @@ const Hero = () => {
                 </svg>
               </Link>
             </li>
+            
           </ul>
         </div>
-        <div className="absolute bottom-5 left-2/4 -ml-3">
+        <div className="absolute bottom-5 left-2/4 -ml-3 hidden lg:block">
           <ScrollDown />
         </div>
       </div>

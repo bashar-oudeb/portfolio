@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { NavLink } from "react-router";
+import Btn from "../ui/btn/Btn";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,13 +82,13 @@ const Navbar = () => {
       <nav className=" flex justify-between items-center py-4  px-6">
         <div className=" ">
           <NavLink to="/" className="center gap-1">
-            <h1 className="h-7 w-7 center font-bold text- bg-quaternary rounded-full hover:bg-tertiary hover:text-quaternary transition-all opacity-80">
+            <h1 className="h-7 w-7 center font-bold text- bg-quaternary rounded-full hover:bg-secondary dark:hover:bg-primary hover:text-quaternary transition-all opacity-">
               B
             </h1>
-            <h1 className="link font-poppins pt-0.5 opacity-80 ">Oudeb</h1>
+            <h1 className="link font-poppins pt-0.5 ">Oudeb</h1>
           </NavLink>
         </div>
-        <div className=" hidden lg:flex lg:items-center tracking-widest gap-2.5">
+        <div className=" hidden lg:flex lg:items-center tracking-widest gap-2.5 ">
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
@@ -105,7 +106,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className=" flex gap-1 ">
-          <div className=" ">
+          <div className="  flex items-center gap-1">
             <button className="" onClick={() => setDarkMode(!darkMode)}>
               {darkMode ? (
                 <svg
@@ -114,7 +115,7 @@ const Navbar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   stroke="#ffffff"
                   width={"40px"}
-                  className="cursor-pointer  opacity-90"
+                  className="cursor-pointer  opacity-"
                 >
                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                   <g
@@ -152,7 +153,7 @@ const Navbar = () => {
                   enable-background="new 0 0 64 64"
                   xmlSpace="preserve"
                   stroke="#ffffff"
-                  className=" w-7 h-7 mt-1.5  cursor-pointer"
+                  className=" size-6 mt-1  cursor-pointer hover:opacity-80 transition-all"
                 >
                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                   <g
@@ -170,6 +171,7 @@ const Navbar = () => {
                 </svg>
               )}
             </button>
+           <Btn/>
           </div>
           <div className=" lg:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
