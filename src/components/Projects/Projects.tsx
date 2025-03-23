@@ -26,36 +26,36 @@ const Projects = () => {
       img: project,
       title: "Home-Smart Website",
       id: 1,
-      view:'',
-      github:'',
+      view:'https://bank-hotel-s2o3.vercel.app/',
+      github:'https://github.com/bashar-oudeb/BankHotel',
     },
     {
       img: project1,
       title: "Pay System Website",
       id: 2,
-      view:'',
-      github:'',
+      view:'https://pay-system.netlify.app/',
+      github:'https://github.com/bashar-oudeb/Pay-System',
     },
     {
       img: project2,
       title: "E-commerce Website",
       id: 3,
-      view:'',
-      github:'',
+      view:'https://glowing-55.netlify.app/',
+      github:'https://github.com/bashar-oudeb/Creative-eCommerce',
     },
     {
       img: project3,
       title: "FullStack E-Commerce",
       id: 4,
-      view:'',
-      github:'',
+      view:'https://github.com/bashar-oudeb/e-commece',
+      github:'https://github.com/bashar-oudeb/e-commece',
     },
     {
       url: project4,
       title: "Headphones Website",
       id: 5,
-      view:'',
-      github:'',
+      view:'https://head-phones-jbl.netlify.app/',
+      github:'https://github.com/bashar-oudeb/Headphones-Website',
     },
   ];
 
@@ -106,12 +106,14 @@ const Projects = () => {
 
 const Card = ({ card, onHoverStart, onHoverEnd, onMouseMove }) => {
   return (
+    <Link to={card.view}  target="blank">
     <div className="">
       <div
         onMouseEnter={onHoverStart}
         onMouseLeave={onHoverEnd}
         onMouseMove={onMouseMove}
         className="group relative h-[450px] w-[400px] md:w-[450px]  overflow-hidden bg-neutral-200 cursor-none"
+      
       >
         <div
           style={{
@@ -130,8 +132,9 @@ const Card = ({ card, onHoverStart, onHoverEnd, onMouseMove }) => {
         </h1>
         <div className="py-1.5 flex items-center gap-2.5 justify-center">
           <Link
-            to={card.view}
+            to={card.github}
             className="text-gray-400 hover:text-gray-200    dark:text-gray-300 dark:hover:text-white flex items-center gap-1 transition-all"
+            target="blank"
           >
             <svg
               aria-hidden="true"
@@ -149,8 +152,9 @@ const Card = ({ card, onHoverStart, onHoverEnd, onMouseMove }) => {
           </Link>
 
           <Link
-            to={card.github}
+            to={card.view}
             className="text-gray-400 hover:text-gray-200  transition-all dark:hover:text-white dark:text-gray-300 flex items-center gap-1"
+            target="blank"
           >
             <svg
               viewBox="0 0 48 48"
@@ -169,6 +173,7 @@ const Card = ({ card, onHoverStart, onHoverEnd, onMouseMove }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 

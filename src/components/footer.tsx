@@ -42,7 +42,8 @@ export default function FooterSection() {
           <ul className="flex justify-center  space-x-5">
             <li>
               <Link
-                to={""}
+                to={"https://github.com/bashar-oudeb"}
+                target="blank"
                 className="text-gray-300 hover:text-gray-600 dark:hover:text-white dark:text-gray-400 transition-all"
               >
                 <svg
@@ -61,7 +62,8 @@ export default function FooterSection() {
             </li>
             <li>
               <Link
-                to={""}
+                to={"https://www.linkedin.com/in/bachar-oudeb/"}
+                target="blank"
                 className="text-gray-300 hover:text-gray-600 dark:hover:text-white dark:text-gray-400 transition-all"
               >
                 <svg
@@ -80,7 +82,8 @@ export default function FooterSection() {
             </li>
             <li>
               <Link
-                to={""}
+                to={"https://www.instagram.com/bashar.oudeb/"}
+                target="blank"
                 className="text-gray-300 hover:text-gray-600 dark:hover:text-white dark:text-gray-400 transition-all"
               >
                 <svg
@@ -99,7 +102,8 @@ export default function FooterSection() {
             </li>
             <li>
               <Link
-                to={""}
+                to={"https://x.com/BasharOudeb"}
+                target="blank"
                 className="text-gray-300 hover:text-gray-600 dark:hover:text-white dark:text-gray-400 transition-all"
               >
                 <svg

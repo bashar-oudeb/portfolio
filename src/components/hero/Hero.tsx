@@ -114,7 +114,8 @@ const Hero = () => {
             </li>
             <li>
               <Link
-                to={""}
+                to={"https://x.com/BasharOudeb"}
+                target="blank"
                 className="text-gray-500 hover:text-gray-600 transition-all dark:hover:text-white dark:text-gray-400"
               >
                 <svg

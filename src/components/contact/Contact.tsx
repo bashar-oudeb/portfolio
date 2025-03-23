@@ -96,16 +96,16 @@ const Contact = () => {
                 <div className=" w-12 h-12">
                   <img
                     className="flex-shrink-0 object-cover w-full h-full rounded-full top-52 " 
-                    src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    src="https://images.pexels.com/photos/3760376/pexels-photo-3760376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     alt=""
                   />
                 </div>
                 <div className="ml-4">
                   <p className="text-base font-semibold text-quaternary opacity-90 font-bebas">
-                    Jenny Wilson
+                  Andrew amrani
                   </p>
                   <p className="ml-0.5 text-xs font-bebas text-quaternary opacity-60">
-                    Product Designer
+                     Designer
                   </p>
                 </div>
               </div>
