@@ -3,8 +3,8 @@ export const Btn = () => {
   return (
     <div className=" flex justify-center ">
     <a
-      href="https://drive.google.com/file/d/1jzncfFcNTzPwP3VdbE99OX3VtoJcovYP/view?usp=sharing"
       className="relative inline-block  px-3 py-1  text-black transition-all duration-300 hover:bg-secondary hover:rounded-full group"
+      href="https://drive.google.com/file/d/1jzncfFcNTzPwP3VdbE99OX3VtoJcovYP/view?usp=sharing"
       target="blank"
     >
       <span className="relative block text-left text-[1em] leading-[1.33333em]  uppercase text-quaternary hover:opacity-50  font-poppins  transition-all duration-300 group-hover:text-white ">
