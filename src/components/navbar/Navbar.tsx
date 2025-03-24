@@ -78,7 +78,7 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <header className="relative z-50">
+    <header className="relative z-50 ">
       <nav className=" flex justify-between items-center py-4  px-6">
         <div className=" ">
           <NavLink to="/" className="center gap-1">
@@ -180,7 +180,7 @@ const Navbar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 stroke="#ffffff"
                 width={"40px"}
-                className="cursor-pointer relative z-50 "
+                className="cursor-pointer relative z-50 fixed "
               >
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g
@@ -204,7 +204,7 @@ const Navbar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 stroke="#ffffff"
                 width={"40px"}
-                className="cursor-pointer opacity-80"
+                className="cursor-pointer opacity-80 "
               >
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g
