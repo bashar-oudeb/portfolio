@@ -17,6 +17,7 @@ const Loader = () => {
         src={profile}
         alt="Loader"
         className="w-full h-full object-cover rounded-full z-10"
+        loading="lazy"
       />
     </div>
   );

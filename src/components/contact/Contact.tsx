@@ -42,6 +42,7 @@ const Contact = () => {
                 className=" absolute w-full translate-x-24 translate-y-8 md:block"
                 src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line.svg"
                 alt=''
+                loading="lazy"
               />
             </div>
             <div className=" mt-10 ">
@@ -98,6 +99,7 @@ const Contact = () => {
                     className="flex-shrink-0 object-cover w-full h-full rounded-full top-52 " 
                     src="https://images.pexels.com/photos/3760376/pexels-photo-3760376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     alt=""
+                    loading="lazy"
                   />
                 </div>
                 <div className="ml-4">

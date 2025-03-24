@@ -124,7 +124,7 @@ const Card = ({ card, onHoverStart, onHoverEnd, onMouseMove }) => {
           }}
           className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
         >
-          <img src={card.img} alt="" className="w-full h-full object-cover" />
+          <img src={card.img} alt="" className="w-full h-full object-cover" loading="lazy"/>
         </div>
       </div>
       <div className=" bg-gradientT">
