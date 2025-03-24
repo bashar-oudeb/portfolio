@@ -3,7 +3,7 @@ export const Btn = () => {
   return (
     <div className=" flex justify-center ">
     <a
-      href="https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-globalnav-goto"
+      href="https://drive.google.com/file/d/1jzncfFcNTzPwP3VdbE99OX3VtoJcovYP/view?usp=sharing"
       className="relative inline-block  px-3 py-1  text-black transition-all duration-300 hover:bg-secondary hover:rounded-full group"
       target="blank"
     >
