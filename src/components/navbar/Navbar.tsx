@@ -70,7 +70,7 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string): void => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
