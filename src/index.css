@@ -20,18 +20,17 @@
   rgba(30, 32, 47, 0.1),
   rgba(10, 9, 9, 0.1)
 );
-
-
-
 }
-
+@theme {
+  --breakpoint-xs: 30rem;
+ 
+}
 html {
   scroll-behavior: smooth;
 }
-body{
+body {
   overflow-x: hidden;
 }
-
 
 img{
   width: 100%;

@@ -7,14 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(() => {
-    const root = document.documentElement;
-    if (darkMode) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [darkMode]);
+  
   const menuVars = {
     initial: {
       scaleY: 0,
@@ -249,19 +242,20 @@ const Navbar = () => {
               variants={containerVars}
               initial="initial"
               animate="open"
-              className=""
+              className=" w-fit"
             >
               {[
                 { name: "Home", path: "/" },
-                { name: "About", path: "/about" },
-                { name: "Portfolio", path: "/Portfolio" },
-                { name: "Contact", path: "/Contact" },
+                { name: "About", path: "about" },
+                { name: "Portfolio", path: "Portfolio" },
+                { name: "Contact", path: "Contact" },
               ].map((link, index) => (
-                <motion.div variants={linkVars} className="">
+                <motion.div variants={linkVars} className=" ">
                   <NavLink
                     key={index}
                     to={link.path}
-                    className="link font-bebas text-6xl text-center "
+                    className="link font-bebas text-5xl sm:text-6xl text-center "
+                    onClick={() => scrollToSection(link.path)}
                   >
                     {link.name}
                   </NavLink>

@@ -8,7 +8,7 @@ const About = () => {
       id="about"
     >
       <div className="  lg:flex lg:px-8">
-        <h1 className="font-bebas text-quaternary  font-bold text-6xl lg:text-8xl text-center opacity-90 uppercase ">
+        <h1 className="font-bebas text-quaternary  font-bold text-4xl sm:text-6xl lg:text-8xl text-center opacity-90 uppercase ">
           About Me.
         </h1>
         <div className="">
@@ -19,7 +19,7 @@ const About = () => {
           </TextReveal>
         </div>
       </div>
-      <div className="">
+      <div className=" mt-14 sm:mt-0">
         <LogoCloud />
       </div>
     </section>

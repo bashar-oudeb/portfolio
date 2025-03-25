@@ -66,8 +66,8 @@ const Projects = () => {
       className=" relative h-[300vh] bg-gradient dark:bg-black md:pt-2 -mb-1 -mt-1"
       id="portfolio"
     >
-      <div className="  absolute px-12 top-12   md:left-1/4 lg:left-0 lg:px-4 ">
-        <h1 className="font-bebas text-quaternary font-bold text-6xl lg:text-8xl opacity-90 uppercase">
+      <div className="  absolute   px-12 top-12   md:left-1/4 lg:left-0 lg:px-4 ">
+        <h1 className="font-bebas text-quaternary font-bold text-5xl sm:text-6xl lg:text-8xl opacity-90 uppercase">
           Projects
         </h1>
       </div>
