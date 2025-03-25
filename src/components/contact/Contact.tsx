@@ -45,7 +45,7 @@ const Contact = () => {
               </p>
 
               <img
-                className=" absolute w-full translate-x-24 translate-y-8 md:block"
+                className=" hidden absolute w-full translate-x-24 translate-y-8 md:block"
                 src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line.svg"
                 alt=""
                 loading="lazy"

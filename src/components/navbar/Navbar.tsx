@@ -255,7 +255,10 @@ const Navbar = () => {
                     key={index}
                     to={link.path}
                     className="link font-bebas text-5xl sm:text-6xl text-center "
-                    onClick={() => scrollToSection(link.path)}
+                    onClick={() => {
+                      scrollToSection(link.path);
+                      setIsOpen(false); // Close the menu after clicking a link
+                    }}
                   >
                     {link.name}
                   </NavLink>

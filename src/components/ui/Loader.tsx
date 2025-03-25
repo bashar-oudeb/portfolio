@@ -1,5 +1,5 @@
 import { useState } from "react";
-import profile from "../../assets/profile1.png";
+import profile from "../../assets/profile1.webp";
 
 const Loader = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -16,18 +16,15 @@ const Loader = () => {
       </div>
 
       {/* Static image inside the circle */}
-      <img
-        src={profile}
-        alt="Loader"
-        className="w-full h-full object-cover rounded-full z-10 transition-opacity duration-500"
-        loading="lazy"
-        style={{
-          filter: isLoaded ? "blur(0)" : "blur(10px)",
-          transition: "filter 0.5s ease-in-out, opacity 0.5s ease-in-out",
-          opacity: isLoaded ? 1 : 0,
-        }}
-        onLoad={() => setIsLoaded(true)}
-      />
+      <img 
+  src={profile} 
+  alt="Loader" 
+  width="224" 
+  height="224" 
+  className="w-full h-full object-cover rounded-full z-10" 
+  style={{ filter: "blur(10px)", transition: "filter 0.5s ease-in-out" }}
+  onLoad={(e) => (e.currentTarget.style.filter = "blur(0)")} 
+/>
     </div>
   );
 };
