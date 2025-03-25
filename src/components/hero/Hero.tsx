@@ -128,7 +128,6 @@ const Hero = () => {
                 </svg>
               </Link>
             </li>
-            
           </ul>
         </div>
         <div className="absolute bottom-5 left-2/4 -ml-3 hidden lg:block">

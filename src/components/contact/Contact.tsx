@@ -12,7 +12,7 @@ const Contact = () => {
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
@@ -26,22 +26,28 @@ const Contact = () => {
     }
   };
   return (
-    <section className=" bg-gradientTwo overflow-hidden pt-5 -mb-1">
+    <section
+      className=" bg-gradientTwo overflow-hidden pt-5 -mb-1"
+      id="contact"
+    >
       <div className="max-w-6xl  sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:items-stretch lg:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10">
           <div className="px-4 mx-auto flex flex-col justify-between lg:py-5">
             <div className=" relative">
               <h2 className="text-3xl font-poppins font-bold leading-tight text-white sm:text-4xl lg:leading-tight lg:text-5xl">
-              Let’s create something amazing together!
+                Let’s create something amazing together!
               </h2>
               <p className="max-w-xl mx-auto md:mx-0 mt-4 font-mono text-base leading-relaxed  text-quaternary opacity-80">
-              I'm passionate about creating seamless digital experiences that not only look great but also perform flawlessly. Whether you're building a brand-new product or improving an existing one, I'm here to help you bring your vision to life.
+                I'm passionate about creating seamless digital experiences that
+                not only look great but also perform flawlessly. Whether you're
+                building a brand-new product or improving an existing one, I'm
+                here to help you bring your vision to life.
               </p>
-              
+
               <img
                 className=" absolute w-full translate-x-24 translate-y-8 md:block"
                 src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line.svg"
-                alt=''
+                alt=""
                 loading="lazy"
               />
             </div>
@@ -90,13 +96,15 @@ const Contact = () => {
               </div>
               <blockquote className="mt-1">
                 <p className="text-md leading-relaxed text-quaternary opacity-80 font-mono">
-                Working with you was incredibly smooth. Everything was delivered faster than expected, and the quality was top-notch. You made everything feel simple and clear.
+                  Working with you was incredibly smooth. Everything was
+                  delivered faster than expected, and the quality was top-notch.
+                  You made everything feel simple and clear.
                 </p>
               </blockquote>
               <div className="flex items-center mt-4">
                 <div className=" w-12 h-12">
                   <img
-                    className="flex-shrink-0 object-cover w-full h-full rounded-full top-52 " 
+                    className="flex-shrink-0 object-cover w-full h-full rounded-full top-52 "
                     src="https://images.pexels.com/photos/3760376/pexels-photo-3760376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     alt=""
                     loading="lazy"
@@ -104,10 +112,10 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <p className="text-base font-semibold text-quaternary opacity-90 font-bebas">
-                  Andrew amrani
+                    Andrew amrani
                   </p>
                   <p className="ml-0.5 text-xs font-bebas text-quaternary opacity-60">
-                     Designer
+                    Designer
                   </p>
                 </div>
               </div>
@@ -118,12 +126,18 @@ const Contact = () => {
             <div className="overflow-hidden  bg-white rounded-md">
               <div className="py-6 px-2.5 ">
                 <h3 className="text-3xl text-center uppercase font-semibold text-black font-poppins">
-                Get in Touch
+                  Get in Touch
                 </h3>
                 <p className="text-center mt-4 text-base text-gray-600 font-mono ">
-                Feel free to get in touch using the form below. I’m always open to new collaborations and opportunities.
+                  Feel free to get in touch using the form below. I’m always
+                  open to new collaborations and opportunities.
                 </p>
-                <form action="#" onSubmit={onSubmit} method="POST" className="mt-4 lg:px-1.5">
+                <form
+                  action="#"
+                  onSubmit={onSubmit}
+                  method="POST"
+                  className="mt-4 lg:px-1.5"
+                >
                   <div className="space-y-6">
                     <div>
                       <label
@@ -154,8 +168,8 @@ const Contact = () => {
                       <div className="mt-2.5 relative">
                         <input
                           type="email"
-                          name='email'
-                          id='email'
+                          name="email"
+                          id="email"
                           placeholder="Enter your full name"
                           className="block w-full px-4 py-4 text-black font-mono text-sm placeholder-gray-400 transition-all duration-200 bg-gray-100 border border-gray-200 rounded-md focus:outline-none "
                         />
@@ -171,7 +185,7 @@ const Contact = () => {
                       </label>
                       <div className="mt-2.5 relative">
                         <textarea
-                          name='message'
+                          name="message"
                           required
                           placeholder="Enter your message"
                           className="block w-full px-4 py-4 text-black font-mono text-sm placeholder-gray-400 transition-all duration-200 bg-gray-100 border border-gray-200 rounded-md resize-y focus:outline-none "
@@ -188,13 +202,14 @@ const Contact = () => {
                         Send Message
                       </button>
                     </div>
-                    <span className="  text-xs font-mono font-medium">{result}</span>
+                    <span className="  text-xs font-mono font-medium">
+                      {result}
+                    </span>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-         
         </div>
       </div>
     </section>

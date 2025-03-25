@@ -13,18 +13,23 @@ const links = [
     title: "Contact",
     href: "#",
   },
-  
 ];
 
 export default function FooterSection() {
   return (
     <footer className="pt-16 pb-6 md:pt-32  bg-gradient">
       <div className="mx-auto max-w-5xl px-6">
-        <Link to="/" aria-label="go home" className="mx-auto flex size-fit  gap-1">
+        <Link
+          to="/"
+          aria-label="go home"
+          className="mx-auto flex size-fit  gap-1"
+        >
           <h1 className="h-8 w-8 center font-bold text- bg-quaternary dark:opacity-90  rounded-full hover:bg-secondary dark:hover:bg-primary hover:text-quaternary transition-all">
             B
           </h1>
-          <h1 className="link font-poppins text-xl  pt-0.5 opacity-90 dark:opacity-90">Oudeb</h1>
+          <h1 className="link font-poppins text-xl  pt-0.5 opacity-90 dark:opacity-90">
+            Oudeb
+          </h1>
         </Link>
 
         <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
@@ -118,7 +123,7 @@ export default function FooterSection() {
             </li>
           </ul>
         </div>
-        <span className="text-quaternary opacity-80 block text-center font-bebas text-sm mt-6" >
+        <span className="text-quaternary opacity-80 block text-center font-bebas text-sm mt-6">
           {" "}
           © {new Date().getFullYear()} All Rights Reserved By Bashar Oudeb.
         </span>

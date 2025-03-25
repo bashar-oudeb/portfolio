@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import Btn from "../ui/btn/Btn";
 
 const Navbar = () => {
@@ -77,6 +77,10 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header className="relative z-50 ">
       <nav className=" flex justify-between items-center py-4  px-6">
@@ -91,17 +95,18 @@ const Navbar = () => {
         <div className=" hidden lg:flex lg:items-center tracking-widest gap-2.5 ">
           {[
             { name: "Home", path: "/" },
-            { name: "About", path: "/about" },
-            { name: "Portfolio", path: "/portfolio" },
-            { name: "Contact", path: "/contact" },
+            { name: "About", path: "about" },
+            { name: "Portfolio", path: "portfolio" },
+            { name: "Contact", path: "contact" },
           ].map((link) => (
-            <NavLink
+            <Link
               key={link.path}
               to={link.path}
               className="link font-bebas"
+              onClick={() => scrollToSection(link.path)}
             >
               {link.name}
-            </NavLink>
+            </Link>
           ))}
         </div>
         <div className=" flex gap-1 ">
@@ -170,7 +175,7 @@ const Navbar = () => {
                 </svg>
               )}
             </button>
-           <Btn/>
+            <Btn />
           </div>
           <div className=" lg:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
@@ -180,7 +185,7 @@ const Navbar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 stroke="#ffffff"
                 width={"40px"}
-                className="cursor-pointer relative z-50 fixed "
+                className="cursor-pointer relative z-50  "
               >
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g

@@ -18,6 +18,8 @@ const Loader = () => {
         alt="Loader"
         className="w-full h-full object-cover rounded-full z-10"
         loading="lazy"
+        style={{ filter: "blur(10px)", transition: "filter 0.5s ease-in-out" }}
+        onLoad={(e) => (e.target.style.filter = "blur(0)")} 
       />
     </div>
   );
